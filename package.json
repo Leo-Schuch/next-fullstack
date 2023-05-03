@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "scripts": {
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build"
+  },
   "dependencies": {
     "next": "^13.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "typescript": "5.0.4"
   }
 }
