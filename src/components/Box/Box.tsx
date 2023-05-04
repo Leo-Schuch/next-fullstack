@@ -5,10 +5,9 @@ import React from "react";
 
 
 interface BoxProps{
-  //resolver tag depois.
-  tag: any;
-  children: React.ReactNode
-  styleSheet: StyleSheet
+  tag?: 'main' | 'div' | 'article' | 'section' | 'ul' | string;
+  children?: React.ReactNode
+  styleSheet?: StyleSheet
 }
 
 export default function Box({ styleSheet, children, tag, ...props  }: BoxProps){
