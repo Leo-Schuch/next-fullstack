@@ -1,5 +1,6 @@
 import Box from "@src/components/Box/Box";
 import Icon from "@src/components/Icon/Icon";
+import Image from "@src/components/Image/Image";
 import Text from "@src/components/Text/Text";
 import React from "react";
 
@@ -21,7 +22,15 @@ Feed.Header = () => {
     <Box
     styleSheet={{color: 'white'}}
     >
-      <Icon size="xl"  name="youtube"/>
+      <Image
+        styleSheet={{
+          width: "128px",
+          borderRadius: "100%", 
+        }}
+        src="https://github.com/Leo-Schuch.png"
+        alt="Imagem perfil Leo Schuch"
+      />
+      <Icon name="youtube"/>
       <Icon name="twitter"/>
       <Icon name="instagram"/>
       <Icon name="github"/>
