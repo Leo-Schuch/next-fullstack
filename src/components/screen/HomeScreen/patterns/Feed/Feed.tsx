@@ -1,38 +1,39 @@
 import Box from "@src/components/Box/Box";
+import Icon from "@src/components/Icon/Icon";
 import Text from "@src/components/Text/Text";
 import React from "react";
 
-interface FeedProps{
-  children: React.ReactNode
+interface FeedProps {
+  children: React.ReactNode;
 }
 
-export default function Feed({children}){
-  return(
+export default function Feed({ children }: FeedProps) {
+  return (
     <Box>
-      <Text>
-        Feed base
-      </Text>
+      <Text>Feed base</Text>
       {children}
     </Box>
-  )
+  );
 }
 
 Feed.Header = () => {
   return (
-    <Box>
-      <Text>
-        Feed Header
-      </Text>
+    <Box
+    styleSheet={{color: 'white'}}
+    >
+      <Icon size="xl"  name="youtube"/>
+      <Icon name="twitter"/>
+      <Icon name="instagram"/>
+      <Icon name="github"/>
+      <Text>Feed Header</Text>
     </Box>
-  )
-}
+  );
+};
 
 Feed.Posts = () => {
   return (
     <Box>
-      <Text>
-        Feed Posts
-      </Text>
+      <Text>Feed Posts</Text>
     </Box>
-  )
-}
+  );
+};
