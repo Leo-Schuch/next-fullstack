@@ -1,4 +1,5 @@
 import Box from "@src/components/Box/Box";
+import Button from "@src/components/Button/Button";
 import Icon from "@src/components/Icon/Icon";
 import Image from "@src/components/Image/Image";
 import Link from "@src/components/Link/Link";
@@ -20,9 +21,8 @@ export default function Feed({ children }: FeedProps) {
 
 Feed.Header = () => {
   return (
-    <Box
-    styleSheet={{color: 'white'}}
-    >
+    <Box>
+      <Button.Base href="https://github.com/leo-schuch">
       <Image
         styleSheet={{
           width: "128px",
@@ -31,7 +31,7 @@ Feed.Header = () => {
         src="https://github.com/Leo-Schuch.png"
         alt="Imagem perfil Leo Schuch"
       />
-      
+      </Button.Base>
       <Link href="https://youtube.com">
       <Icon name="youtube"/>
       </Link>
