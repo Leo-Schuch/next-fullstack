@@ -22,7 +22,7 @@ export default function HomeScreen() {
       
     }}
      >
-      <Link href='/sobre'>
+      <Link colorVariant="negative" href='/sobre'>
         Vá para a página Sobre
       </Link>
       <Link href='https://google.com'>
