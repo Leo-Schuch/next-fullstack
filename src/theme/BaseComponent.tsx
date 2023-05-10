@@ -7,6 +7,7 @@ import { parseStyleSheet } from "@displaykit/responsive_styles";
 
 interface StyledBaseComponent{
   styleSheet?: StyleSheet;
+  ref: any;
 }
 const StyledBaseComponent = styled.div<StyledBaseComponent>`
   display: flex;
@@ -16,11 +17,15 @@ const StyledBaseComponent = styled.div<StyledBaseComponent>`
   ${({ styleSheet }) => parseStyleSheet(styleSheet) }
 `;
 
-export const BaseComponent = (props) => {
-  return(
-    <StyledBaseComponent {...props}/>
-  )
+interface BaseComponentProps{
+  styleSheet: StyleSheet
+  [key: string]: any;
 }
+export const BaseComponent = React.forwardRef<unknown, BaseComponentProps>((props, ref) => {
+  return(
+    <StyledBaseComponent ref={ref} {...props}/>
+  )
+})
 BaseComponent.defaultProps={
   styleSheet: {},
 }
