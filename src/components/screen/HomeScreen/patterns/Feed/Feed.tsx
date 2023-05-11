@@ -22,6 +22,9 @@ export default function Feed({ children }: FeedProps) {
 Feed.Header = () => {
   return (
     <Box>
+      <Button >
+        testando123
+      </Button>
       <Button.Base href="https://github.com/leo-schuch">
       <Image
         styleSheet={{
